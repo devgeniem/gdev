@@ -81,6 +81,12 @@ and docker will add it into the `/etc/hosts` file inside the container automatic
 # It reads docker-compose.yml from current directory and starts up containers
 $ gdev up
 
+# Quickly pause the project and free resources
+$ gdev pause
+
+# Wake the project up from pause as quickly as it was paused
+$ gdev unpause
+
 # Open shell into web container
 $ gdev shell
 

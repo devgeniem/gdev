@@ -42,7 +42,7 @@ services:
     restart: always
     network_mode: "bridge"
   signaler:
-    image: onnimonni/signaler
+    image: devgeniem/signaler
     environment:
       GENERATOR: "self-signed"
     volumes:
