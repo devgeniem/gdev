@@ -65,6 +65,15 @@
         state: link
         force: yes
       tags: ['pre-install']
+
+    - name: Symlink gdev2 bin to PATH
+      become: yes
+      become_method: sudo
+      file:
+        src: "{{gdev_env_dir}}/bin/gdev2"
+        dest: /usr/local/bin/gdev2
+        state: link
+      tags: ['pre-install']
       
     - name: Add user to docker group
       user: 

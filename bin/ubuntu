@@ -39,9 +39,13 @@ if [ -d "$GDEV_DIR" ]; then
   cd $GDEV_DIR
   # Remove any local changes and update to origin
   git reset HEAD --hard && git pull origin HEAD
+  git fetch --all
+  git checkout gdev2
+  git pull origin gdev2
 else
   echo "Checking out gdev repo..."
-  sudo git clone https://github.com/$REPO.git $GDEV_DIR 2>/dev/null
+  git clone https://github.com/$REPO.git $GDEV_DIR 2>/dev/null
+  git checkout gdev2
   sudo chmod -R og+rw $GDEV_DIR
 fi
 
