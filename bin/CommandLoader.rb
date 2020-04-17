@@ -18,4 +18,3 @@ class CommandLoader
         end
     end
 end
-

@@ -21,7 +21,8 @@ class CommandHandler
         when ".py"
             handle_command("python #{command_file}")
         when ".sh"
-            handle_command("bash #{command_file}")
+            arg_string = args.join(" ")
+            handle_command("bash #{command_file} #{arg_string}")
         else
             puts command_file
             puts "Could not understand script format!"
