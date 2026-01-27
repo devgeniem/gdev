@@ -205,7 +205,8 @@ HEREDOC
     if RUBY_PLATFORM.include? "linux"
       box_ip="172.17.0.1"
     else
-      box_ip="10.254.254.254"
+      # Docker Desktop 4.52+ changed networking - use 127.0.0.1 for DNS binding
+      box_ip="127.0.0.1"
     end
     # Set system variables which we can use in our templates
     system({"BOX_IP" => box_ip},args.join(" "))

@@ -26,7 +26,7 @@ services:
       - ${BOX_IP}:53:53/udp
     cap_add:
       - NET_ADMIN
-    command: "--address=/test/${BOX_IP}"
+    command: "--address=/test/127.0.0.1"
     restart: always
     network_mode: "bridge"
   mail:
